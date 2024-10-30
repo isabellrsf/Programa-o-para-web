@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Controle de Ponto</title>
+  <link rel="stylesheet" href="prova.css">
+</head>
+<body>
+  <header>
+    <h1>Controle de Ponto</h1>
+    <p id="date-time"></p>
+  </header>
+
+  <main>
+    <section class="ponto">
+      <h2>Registrar Ponto</h2>
+      <div>
+        <button id="entrada-expediente">Entrada Expediente</button>
+        <button id="saida-expediente">Saída Expediente</button>
+      </div>
+      <div>
+        <button id="entrada-intervalo">Entrada Intervalo</button>
+        <button id="saida-intervalo">Saída Intervalo</button>
+      </div>
+    </section>
+
+    <div class="justificativa">
+    <div>
+      <button id="justificar-ausencia">Justificar Ausência</button>
+      <label for="upload-arquivo" class="custom-upload">
+        Escolher Arquivo
+      </label>
+      <input type="file" id="upload-arquivo" style="display: none;">
+    </div>
+
+    <div class="campo-data-observacao">
+      <div class="data">
+        <label for="data-ponto">Data:</label>
+        <input type="date" id="data-ponto">
+      </div>
+      <div class="observacao">
+        <label for="observacao">Observação:</label>
+        <input type="text" id="observacao" name="observacao">
+      </div>
+    </div>
+  </div>
+
+    <section class="relatorio">
+      <h2>Relatório de Ponto</h2>
+      <div>
+        <button id="filtrar-semana">Filtrar Última Semana</button>
+        <button id="filtrar-mes">Filtrar Último Mês</button>
+      </div>
+      <table id="tabela-relatorio">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Entrada</th>
+            <th>Saída</th>
+            <th>Intervalo Entrada</th>
+            <th>Intervalo Saída</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="prova.js"></script>
+</body>
+</html>
